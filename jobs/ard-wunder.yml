@@ -1,0 +1,9 @@
+name: ARD - Wunder
+shortname: ard-wunder
+provider: ard
+tag: search
+tagvalue: Wunder
+days_back: 50
+type: docu
+category: Documentations
+min_duration: 120

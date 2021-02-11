@@ -1,0 +1,9 @@
+name: Robotik Dokus
+shortname: dokus-robotik
+provider: zdf
+tag: category
+tagvalue: https://www.zdf.de/doku-wissen
+days_back: 100
+type: docu
+category: Documentations
+title_regex: '.*Robotik.*'
