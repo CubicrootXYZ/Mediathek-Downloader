@@ -28,16 +28,19 @@ Supported video types:
 **New TV show:**
 
 `tag: overview.new`
+
 `tagvalue:` url of a overview page (search for a TV show, first result is usually the overview page)
 
 **TV show teasers:**
 
 `tag: overview.teaser`
+
 `tagvalue:` url of a overview page (search for a TV show, first result is usually the overview page)
 
 **Categories:**
 
 `tag: category`
+
 `tagvalue:` url of the category page (choose category from menu)
 
 ### ARD
@@ -48,6 +51,7 @@ Supported video types:
 **Search**
 
 `tag: search`
+
 `tagvalue: ` search keyword
 
 
