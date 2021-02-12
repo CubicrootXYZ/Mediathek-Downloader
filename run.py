@@ -181,12 +181,12 @@ class Downloader:
 
             if "min_duration" in job.keys():
                 if int(job["min_duration"]) < int(infos["duration"]):
-                    print(f"{self.prä} {infos['title']} {infos['duration']} does not match min duration")
+                    print(f"{self.prä} {infos['title']} {infos['duration']} does not match min duration ({job['min_duration']})")
                     return False
 
             if "max_duration" in job.keys():
                 if int(job["max_duration"]) > int(infos["duration"]):
-                    print(f"{self.prä} {infos['title']} {infos['duration']} does not match max duration")
+                    print(f"{self.prä} {infos['title']} {infos['duration']} does not match max duration ({job['max_duration']})")
                     return False
 
             path = self.config["mediathek_path"] + "/" + self._cleanFileName(str(job["category"])) + "/" + self._cleanFileName(str(job["shortname"]))
