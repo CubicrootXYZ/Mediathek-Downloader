@@ -1,5 +1,7 @@
 **DO NOT ABUSE THE SITES AND APIS PROVIDED BY OTHERS! DO NOT SHARE CONTENT YOU DO NOT HAVE THE RIGHTS TO!**
 
+**Clarify the legal situation in your country before use!**
+
 # Mediathek Downloader
 
 Mediathek Downloader is a small python applicatopn for automatically downloading videos from german public service broadcasting. 
