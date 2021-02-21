@@ -6,6 +6,12 @@ Mediathek Downloader is a small python applicatopn for automatically downloading
 
 The application is based on `youtube-dl`.
 
+## Installation
+
+Use the provided [docker image](https://hub.docker.com/repository/docker/cubicrootxyz/mediathek-downloader).
+
+I strongly recommend using docker-compose for running this. You'll find an example `docker-compose.yml` on docker hub.
+
 ## How it works
 
 The timer class in `run.py` shedules download times. It triggers the downloader class. This will then read all job files in `/jobs` and execute them. 
