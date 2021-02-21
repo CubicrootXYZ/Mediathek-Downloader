@@ -7,3 +7,4 @@ days_back: 10
 type: series
 category: TVshows
 max_duration: 7200
+min_duration: 120
