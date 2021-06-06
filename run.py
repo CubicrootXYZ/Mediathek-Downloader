@@ -3,6 +3,7 @@ import youtube_dl
 import os, importlib, yaml, glob, fnmatch, datetime, time, re, string
 import importlib.machinery
 from pathlib import Path
+from os import walk
 
 os.chdir("/opt/app")
 
@@ -190,10 +191,7 @@ class Downloader:
                     return False
 
             path = self.config["mediathek_path"] + "/" + self._cleanFileName(str(job["category"])) + "/" + self._cleanFileName(str(job["shortname"]))
-
-            if Path('path' + infos["ext"]).is_file():
-                print(f"{self.prä} File already exists: {name}")
-                return False
+            _, _, all_files_from_job = next(walk(path))
 
             if job["type"] == "series.short":
                 path += "/All_Episodes"
@@ -201,6 +199,16 @@ class Downloader:
                 path += "/Season " + str(uploadtime.strftime("%Y"))
 
             path += "/" + name
+
+            if Path(path + "." + infos["ext"]).is_file():
+                print(f"{self.prä} File already exists: {name}")
+                return False
+
+            if len(infos["title"]) > 10:
+                for file in all_files_from_job:
+                    if infos["title"] in file:
+                        print(f"{self.prä} Title already collected by this job: {infos['title']}")
+                        return False
 
             ydl_opts = {
                 'outtmpl': path + '.%(ext)s',
